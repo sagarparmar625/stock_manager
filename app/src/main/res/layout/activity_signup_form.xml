@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp"
+    android:background="@color/dark_blue"
+    tools:context=".signup_form">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginBottom="50dp"
+        android:textColor="@color/light_sky"
+        android:text="Sing Up"
+        >
+    </TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Compny Name"
+        android:inputType="text"
+        android:textColor="@color/light_sky"
+        android:fontFamily="@font/ar"
+        android:paddingBottom="20dp"
+        android:paddingLeft="2dp"
+        android:drawableLeft="@drawable/ic_baseline_add_business_24"
+        android:drawablePadding="5dp"
+        android:textColorHint="@color/light_sky"
+
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="User Name"
+        android:inputType="text"
+        android:textColor="@color/light_sky"
+        android:fontFamily="@font/ar"
+        android:drawableLeft="@drawable/ic_baseline_account_circle_24"
+        android:paddingBottom="20dp"
+        android:paddingLeft="2dp"
+        android:drawablePadding="5dp"
+        android:textColorHint="@color/light_sky"
+
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/light_sky"
+        android:fontFamily="@font/ar"
+        android:paddingBottom="20dp"
+        android:paddingLeft="2dp"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:drawablePadding="5dp"
+        android:textColorHint="@color/light_sky"
+
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="@color/light_sky"
+        android:fontFamily="@font/ar"
+        android:paddingBottom="20dp"
+        android:paddingLeft="2dp"
+        android:drawableLeft="@drawable/ic_baseline_security_24"
+        android:drawablePadding="5dp"
+        android:textColorHint="@color/light_sky"
+
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Conform Password"
+        android:inputType="textPassword"
+        android:textColor="@color/light_sky"
+        android:fontFamily="@font/ar"
+        android:paddingBottom="20dp"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="2dp"
+        android:drawableLeft="@drawable/ic_baseline_security_24"
+        android:drawablePadding="5dp"
+        android:textColorHint="@color/light_sky"
+
+        />
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/light_sky"
+        android:background="@drawable/btn"
+        android:shadowColor="@color/black"
+        android:textSize="18sp"
+        android:text="Registration" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Already a Member? Login"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/ar"
+        android:textAlignment="center"
+        android:textColor="@color/light_blue"
+        />
+
+
+</LinearLayout>
