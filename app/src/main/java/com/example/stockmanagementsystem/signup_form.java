@@ -1,7 +1,9 @@
 package com.example.stockmanagementsystem;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -10,6 +12,9 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class signup_form extends AppCompatActivity {
@@ -68,7 +73,33 @@ public class signup_form extends AppCompatActivity {
                     Toast.makeText(signup_form.this, "Please Enter Minimum 6 digit", Toast.LENGTH_SHORT).show();
                     return;
                 }
-            }
-        });
+
+                progressbar_s.setVisibility(View.VISIBLE);
+
+                if(password.equals(confpassword)){
+
+
+
+                        firebaseAuth.createUserWithEmailAndPassword(email,password)
+                                .addOnCompleteListener(signup_form.this, new OnCompleteListener<AuthResult>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<AuthResult> task) {
+
+                                        progressbar_s.setVisibility(View.GONE);
+                                        if (task.isSuccessful()) {
+                                            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                                            Toast.makeText(signup_form.this, "Regitration Successfully", Toast.LENGTH_SHORT).show();
+                                        } else {
+                                            Toast.makeText(signup_form.this, "Regitration is Failed", Toast.LENGTH_SHORT).show();
+                                        }
+
+                                        // ...
+                                    }
+                                });
+                    }
+
+                }
+
+            });
+        }
     }
-}
