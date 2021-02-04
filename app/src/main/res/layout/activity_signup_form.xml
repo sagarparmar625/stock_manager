@@ -63,11 +63,11 @@
         />
 
     <EditText
-        android:id="@+id/email_s"
+        android:id="@+id/phoneno_s"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="E-mail"
-        android:inputType="textEmailAddress"
+        android:hint="Phone Number"
+        android:inputType="text|number"
         android:textColor="@color/light_sky"
         android:fontFamily="@font/ar"
         android:paddingBottom="20dp"
@@ -94,22 +94,6 @@
 
         />
 
-    <EditText
-        android:id="@+id/confpassword_s"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Conform Password"
-        android:inputType="textPassword"
-        android:textColor="@color/light_sky"
-        android:fontFamily="@font/ar"
-        android:paddingBottom="20dp"
-        android:layout_marginBottom="20dp"
-        android:paddingLeft="2dp"
-        android:drawableLeft="@drawable/ic_baseline_security_24"
-        android:drawablePadding="5dp"
-        android:textColorHint="@color/light_sky"
-
-        />
     <Button
         android:id="@+id/btn_signup"
         android:layout_width="match_parent"
@@ -122,6 +106,7 @@
 
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/login_click"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Already a Member? Login"
